@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathFinder</title>
+    <style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(webimg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.search-bar {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar input {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.college-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 800px;
+}
+
+.college-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit; /* Ensures text color stays the same */
+    transition: transform 0.2s ease; /* Add a slight hover effect */
+}
+
+.college-card:hover {
+    transform: scale(1.05); /* Grows slightly on hover */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+.image-placeholder {
+    background-color: #ccc;
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+.logo {
+    width: 100px;
+    height: auto;
+}
+.head {
+            background-color: #6a6c6b;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* New logo-title class to control logo and title spacing */
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;  /* Adjust width as needed */
+            height: auto;  /* Keeps the aspect ratio */
+        }
+        .head h1 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-left: 10px; /* Adjusts space between logo and text */
+        }
+        .head ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .head ul li {
+            margin-left: 20px;
+        }
+        .head ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+        .head ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .image {
+            width: 170px;
+            height: 120px;
+        }
+    </style>
+</head>
+<body> 
+    <header class="head">
+        <div class="logo-title">
+        <img src="logo3-transformed (1).png"class="logo">
+        <h1>PATH FINDER</h1>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="find2.html">Find College</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </header>
+
+    <section class="search-bar">
+        <input type="text" placeholder="Search your college">
+        <button>🔍</button>
+    </section>
+
+    <section class="college-grid">
+        <!-- Example of linking to a college page -->
+        <a href="kits.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="kitsclg.jpg"class="image">
+            </div>
+            <p>KKR & KSR Institute of Technological and Sciences </p>
+        </a>
+        
+        <a href="rvr.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="RVR.jpg"class="image">
+            </div>
+            <p>RVR & JC college of Engineering </p>
+        </a>
+        
+        <a href="vvit.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="vvit.webp"class="image">
+            </div>
+            <p>Vasireddy Venkatadri institute of Technology</p>
+        </a>
+        
+        <a href="tirumala.html" class="college-card">
+            <div class="image-placeholder"> 
+                <img src="tirumala.avif"class="image">
+            </div>
+            <p>Tirumala Engineering college</p>
+        </a>
+        
+        <a href="nec.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="nec.jpeg"class="image">
+            </div>
+            <p>Narasaraopeta Engineering College</p>
+        </a>
+        
+        <a href="vignan.html" class="college-card">
+            <div class="image-placeholder"> 
+                <img src="vignan.avif"class="image">
+            </div>
+            <p>Vignan University</p>
+        </a>
+        <a href="malineni.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="malineni.jpg"class="image">
+            </div>
+            <p>Malineni Lakshmaiah Engineering College</p>
+        </a>
+        
+        <a href="khit.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="khit.jpeg"class="image">
+            </div>
+            <p>Kallam Haranadhareddy Institute of Technology</p>
+        </a>
+        
+        <a href="aditya.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="aditya.avif"class="image">
+            </div>
+            <p>Aditya Engineering College</p>
+        </a>
+        
+        <a href="srkr.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="srkr.jpg"class="image">
+            </div>
+            <p>Sagi Rama Krishnam Raju Engineering College (SRKR)</p>
+        </a>
+        
+        <a href="vasavi.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="sri_vasavi.jpg"class="image">
+            </div>
+            <p>sri vasavi engineering college</p>
+        </a>
+        
+        <a href="vishnu.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="vishnu.jpg"class="image">
+            </div>
+            <p>Sri Vishnu Engineering College for Women, Bhimavaram</p>
+        </a>
+        <a href="kl.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="kl_university.webp"class="image">
+            </div>
+            <p>kl university</p>
+        </a>
+        
+        <a href="vit.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="vit.jpeg"class="image">
+            </div>
+        <p>VIT-AP University</p>
+        </a>
+        
+        <a href="srm.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="SRM.webp"class="image">
+            </div>
+            <p>SRM-ap university</p>
+        </a>
+        
+        <a href="amrita.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="amrita.jpg"class="image">
+            </div>
+            <p>Amrita University, Amaravati</p>
+        </a>
+        
+        <a href="nri.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="nri.webp"class="image">
+            </div>
+            <p>NRI Institute of Technology</p>
+        </a>
+        
+        <a href="akshar.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="akshar.jpg"class="image">
+            </div>
+            <p>KITS Akshar College</p>
+        </a>
+        <a href="chalapathi.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="chalapathi.jpg"class="image">
+            </div>
+            <p>chalapathi engineering college</p>
+        </a>
+        
+        <a href="jntuk.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="jntuk.webp"class="image">
+            </div>
+            <p>JNTUK (Jawaharlal Nehru Technological University, Kakinada) </p>
+        </a>
+        
+        <a href="andhra.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="andhra_university.jpg"class="image">
+            </div>
+            <p>Andhra University Campus</p>
+        </a>
+        
+        <a href="svu.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="svu.jpeg"class="image">
+            </div>
+            <p>Sri Venkateswara University (SVU)</p>
+        </a>
+        
+        <a href="anu.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="anu.jpg"class="image">
+            </div>
+            <p>Acharya Nagarjuna University (ANU)</p>
+        </a>
+        
+        <a href="vrsec.html" class="college-card">
+            <div class="image-placeholder">
+                <img src="vrsec.jpg"class="image">
+            </div>
+            <p>Velagapudi Ramakrishna Siddhartha Engineering College (VRSEC)</p>
+        </a>
+        
+    </section>
+</body>
+</html>

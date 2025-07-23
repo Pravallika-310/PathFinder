@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATH FINDER</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-image: url(webimage7.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            animation: zoomBackground 10s ease-in-out infinite;
+
+        }
+        @keyframes zoomBackground {
+            0%{
+                background-size: 100%;
+            }
+            50%{
+                background-size: 110%;
+            }
+            100%{
+                background-size: 100%;
+            }
+        }
+        .head {
+            background-color: #6a6c6b;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        /* New logo-title class to control logo and title spacing */
+        .logo-title {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            width: 100px;  /* Adjust width as needed */
+            height: auto;  /* Keeps the aspect ratio */
+        }
+        .head h1 {
+            color: #fff;
+            font-size: 1.5em;
+            margin-left: 10px; /* Adjusts space between logo and text */
+        }
+        .head ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .head ul li {
+            margin-left: 20px;
+        }
+        .head ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1em;
+            padding: 5px 10px;
+            transition: background 0.3s;
+        }
+        .head ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .hero {
+            color: white;
+            text-align: center;
+            padding: 100px 100px;
+        }
+        .hero h2 {
+            font-size: 3em; 
+            font-weight: bold; 
+        }
+        .hero p {
+            margin: 10px 0 20px; 
+            font-size: 1.2em; 
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #23d7e4;
+            color: rgb(247, 248, 248);
+            text-decoration: none;
+            font-size: 1.5em;
+            border-radius: 3px;
+            box-shadow: inset;
+        }
+        .button:hover { 
+            background: #64abf6;
+            transition: 0.6s; 
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .head h1 {
+                font-size: 1.2em;
+                margin-left: 5px; /* Reduce gap for smaller screens */
+            }
+            .logo {
+                width: 80px; /* Smaller logo on smaller screens */
+            }
+            .head ul li a {
+                font-size: 0.9em;
+                padding: 5px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="head">
+        <div class="logo-title">
+            <img src="logo3-transformed (1).png" class="logo">
+            <h1>PATH FINDER</h1>
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="aboutus.html">About Us</a></li>
+            <li><a href="find2.html">Find College</a></li>
+            <li><a href="contactus.html">Contact Us</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </header>
+    <section class="hero" id="home">
+        <p>FIND YOUR COLLEGE</p>
+        <h2>WITH PATH FINDER</h2>
+        <p>Simplify Your College Search</p>
+        <a href="find2.html" class="button">Get Started</a>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+</html>
